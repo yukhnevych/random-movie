@@ -36,7 +36,7 @@ export default class RandomMovie extends React.Component {
 
   render() {
     return (
-      <div class="container">
+      <div class="layout">
         {this.addMovie()}
         <GetMovieButton onClick={this.randomMovie.bind(this)}/>
       </div>
