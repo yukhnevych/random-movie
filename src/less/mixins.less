@@ -1,0 +1,85 @@
+.radius(@r: @base-radius) {
+  -webkit-border-radius: @r;
+  -moz-border-radius: @r;
+  -ms-border-radius: @r;
+  border-radius: @r;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 1em;
+  .radius();
+
+  &,
+  &&-md {
+    border-bottom: 3px solid;
+    border-right: 1px solid;
+    font-size: 1em;
+    padding: @base-space @base-space * 2;
+  }
+
+  &&-xs {
+    border-bottom: 2px solid;
+    border-right: 1px solid;
+    font-size: 0.75em;
+    padding: @space-xs @space-xs * 2;
+  }
+
+  &&-sm {
+    border-bottom: 2.5px solid;
+    border-right: 1px solid;
+    font-size: 0.875em;
+    padding: @space-sm @space-sm * 2;
+  }
+
+  &&-lg {
+    border-bottom: 4px solid;
+    border-right: 2px solid;
+    font-size: 1.25em;
+    padding: @space-lg @space-lg * 2;
+  }
+
+  &&-xl {
+    border-bottom: 5px solid;
+    border-right: 3px solid;
+    font-size: 1.5em;
+    padding: @space-xl @space-xl * 2;
+  }
+
+  &,
+  &&-default {
+    background-color: @base-default;
+    border-color: darken(@base-default, 5%);
+    color: @base-text-color;
+  }
+
+  &&-primary {
+    background-color: @base-primary;
+    border-color: darken(@base-primary, 5%);
+    color: @base-text-color-light;
+  }
+
+  &&-info {
+    background-color: @base-info;
+    border-color: darken(@base-info, 5%);
+    color: @base-text-color-light;
+  }
+
+  &&-success {
+    background-color: @base-success;
+    border-color: darken(@base-success, 5%);
+    color: @base-text-color-light;
+  }
+
+  &&-warning {
+    background-color: @base-warning;
+    border-color: darken(@base-warning, 5%);
+    color: @base-text-color-light;
+  }
+
+  &&-danger {
+    background-color: @base-danger;
+    border-color: darken(@base-danger, 5%);
+    color: @base-text-color-light;
+  }
+}

@@ -21,6 +21,7 @@ gulp.task('less', function() {
       .pipe(plumber())
       .pipe(sourceMaps.init())
       .pipe(less())
+      .pipe(sourceMaps.write('maps'))
       .pipe(gulp.dest('dist/css'))
       .pipe(cleanCSS({
         compatibility: 'ie8'
@@ -29,7 +30,6 @@ gulp.task('less', function() {
         suffix: '.min'
       }))
       .pipe(gulp.dest('dist/css'))
-      .pipe(sourceMaps.write('maps'))
       .on('finish', function() {
         console.info('Styles compiled!');
       });

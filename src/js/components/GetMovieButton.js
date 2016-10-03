@@ -14,7 +14,7 @@ export default class GetMovieButton extends React.Component {
 
   render() {
     return (
-      <a href="#" class="btn btn-primary get-movie-button" onClick={this.onClick.bind(this)}>Get Movie</a>
+      <a href="#" class="btn btn-lg btn-success get-movie-button" onClick={this.onClick.bind(this)}>Get Movie</a>
     );
   }
 }

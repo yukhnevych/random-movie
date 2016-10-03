@@ -1,7 +1,19 @@
+* {
+  box-sizing: border-box;
+
+  &,
+  &:focus {
+    outline: 0 none;
+  }
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  background-color: @base-background;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  font-weight: @base-font-weight;
 }
