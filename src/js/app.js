@@ -1,9 +1,14 @@
 
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import todoApp from './reducers';
+import App from './components/RandomMovie';
 
-import RandomMovie from "./components/RandomMovie"
-
-const app = document.getElementById('app');
-
-ReactDOM.render(<RandomMovie />, app);
+render(
+  <Provider>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
